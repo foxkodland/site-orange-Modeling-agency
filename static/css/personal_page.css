@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    color: rgb(0, 0, 0);
+}
+
+header {
+    height: 80px;
+    margin-bottom: 40px;
+}
+
+
+/*  */
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+
+    margin-bottom: 50px;
+    /* align-items: center; */
+}
+
+.name {
+    text-transform: uppercase;
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.about span {
+    font-weight: 700;
+}
+
+.about p:not(:first-child){
+    font-size: 25px;
+} 
+
+
+.photo img {
+    object-fit: cover;
+    max-height: 400px;
+}
+
+
+
+.photos {
+    padding: 20px;
+
+    column-count: 3;
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+
+    column-width: 30%;
+    -webkit-column-width: 30%;
+    -moz-column-width: 30%;
+
+    column-gap: 20px;
+    -webkit-column-gap: 20px;
+    -moz-column-gap: 20px;
+
+}
+
+.photos > * {
+    margin-bottom: 20px;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+
+@media (max-width: 800px) {
+    .name {
+        font-size: 35px;
+    }
+    .about p:not(:first-child) {
+        font-size: 20px;
+    }
+
+    .photos {
+        column-count: 2;
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+
+        column-width: 50%;
+        -webkit-column-width: 50%;
+        -moz-column-width: 50%;
+    }
+
+}
+
+@media (max-width: 550px) {
+    .row  {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .photos {
+        column-count: 1;
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+
+        column-width: 90%;
+        -webkit-column-width: 90%;
+        -moz-column-width: 90%;
+    }
+} 
+
+
+
+/* курсор - лупа при наведении на фото */
+.photos > img {
+    cursor: zoom-in;
+}
+
+
+/* для фулскрин */
+
+
+.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fullscreen_back {
+    background-color: rgba(0, 0, 0, 0.854);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.fullscreen > img {
+    height: 100%;
+    max-width: 95%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-sizing: border-box;
+}
+
+.left, .right {
+
+    position: absolute;
+    top: 49%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-size: 20px;
+    font-weight: 900;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 100px;
+    border: 1px solid white;
+}
+
+.left {
+    left: 20px;
+}
+
+.right {
+    right: 20px;
+}
+
+.left:hover, 
+.right:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+    transition: .3s;
+    cursor: pointer;
+}
+
+
+.fullscreen {
+    display: none;
+}
+
+/* крестик */
+.cross {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    
+    width: 30px;
+    height: 30px;
+    z-index: 10;
+
+
+}
+
+.cross__span1,
+.cross__span2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: rgb(244, 244, 244);
+    border-radius: 5px;
+}
+
+.cross__span1 {
+    transform: rotate(45deg);
+}
+
+.cross__span2 {
+    transform: rotate(-45deg);
+}
+
+.cross:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+
+/* двоеточие после характеристик */
+.about span::after {
+    content: ":";
+}

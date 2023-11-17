@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteRule ^index\.html$ / [R=301,L]
+RewriteRule ^(.*)/index\.html$ /$1/ [R=301,L]
+
+ErrorDocument 404 /errors/error.html
+
+ErrorDocument 500 /errors/error.html
+
+ErrorDocument 401 /errors/error.html
+
+ErrorDocument 403 /errors/error.html

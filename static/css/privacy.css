@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --margin-bottom: 20px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    font-size: 18px;
+}
+
+
+/*  */
+header {
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+header {
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+/* чтобы футер не висел в середине */
+main {
+    min-height: calc(100vh - 140px - 87px - 30px);
+}
+
+.privacy {
+    padding: 30px;
+}
+
+.privacy h2 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: var(--margin-bottom);
+
+    text-transform: uppercase;
+}
+
+.privacy > p,
+.privacy > h4,
+.privacy > ul {
+    margin-bottom: var(--margin-bottom);
+}
+
+.privacy > ul {
+    padding-left: 30px;
+}
+
+
+
+@media (max-width: 800px) {
+    .privacy h2 {
+        font-size: 30px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .privacy h2 {
+        font-size: 25px;
+    }
+
+    .privacy > ul {
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .privacy h2 {
+        font-size: 20px;
+    }
+
+    .privacy > ul {
+        padding-left: 20px;
+    }
+}

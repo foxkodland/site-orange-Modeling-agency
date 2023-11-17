@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Orange model management gives models the opportunity to work at a professional level in collaboration with the world's leading modeling agencies.">
+   
+    <title>Orange | Form</title>
+    <link rel="stylesheet" href="static/css/header.css">
+    <link rel="stylesheet" href="static/css/form.css">
+
+    <link rel="icon" href="favicons/favicon.ico"> <!--32×32 -->
+    <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png"> <!-- 180×180 -->
+</head>
+<body>
+    <header>
+        <div class="lang">
+            <span id="lang_ru">RU</span>
+            <span>|</span>
+            <span id="lang_en" class="lang_select">ENG</span>
+        </div>
+
+        <p><a href="/" class="header__link">
+            <span class="header__Orange">Orange</span>
+            <span class="header__management">model management</span>
+        </a></p>
+
+        <div class="burger_menu">
+            <span></span>
+        </div>
+
+        <div class="menu">
+            <div class="brightness"></div>
+            <nav>
+                <a class="menu__item lang-women" href="/women.html">women</a>
+                <a class="menu__item lang-men" href="/men.html">men</a>
+                <a class="menu__item lang-newfaces" href="/newfaces.html">new faces</a>
+                <a class="menu__item lang-about" href="/about.html">about us</a>
+                <a class="menu__item lang-form" href="/form.html">become a model</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="form" >
+                <form method="post" action="email.php" autocomplete="off">
+                    <p class="lang-form-p">Привет! Если ты хочешь стать частью нашей команды, пожалуйста, заполни анкету ниже. <br>
+                        Если твоя внешность покажется нам интересной, мы обязательно с тобой свяжемся!</p>        
+                    <input type="text" name="name" class="lang-placeholder-name" placeholder="Full name" required autocomplete="new-password">
+                    <input type="text" name="age" class="lang-placeholder-age" placeholder="Age" required >
+                    <input type="text" name="height" class="lang-placeholder-height" placeholder="Height">
+                    <input type="text" name="city" class="lang-placeholder-city" placeholder="City">
+                    
+                    <p class="lang-form-contact">Как можно с тобой связаться?</p>
+                    <input type="text" name="whatsup" placeholder="WhatsApp">
+                    <input type="text" name="email" placeholder="Email">
+                    <input type="text" name="insta" id="" placeholder="Instagram">
+
+                    <p class="lang-form-about">Напиши немного о себе</p>
+                    <textarea name="textarea" id="" cols="60" rows="10"></textarea>
+                    <button class="submit lang-form-submit" type="submit">Отправить</button>
+                </form>
+            </div>
+    </main>
+    <footer>
+        <p>Orange MODEL MANAGEMENT © 2023 ALL RIGHTS RESERVED</p>
+        <div class="footer__privacy">
+            <a class="lang-privacy-policy" href="/privacy-policy.html">Privacy policy</a>
+            <span>|</span>
+            <a class="lang-coockie-policy" href="/cookie-policy.html">Cookie policy</a>
+        </div>
+    </footer>
+    <script src="static/js/burger.js"></script>
+    <script src="static/js/lang.js"></script>
+    <script src="static/js/translate-LocalStorage.js"></script>
+</body>
+</html>
